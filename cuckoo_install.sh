@@ -415,4 +415,4 @@ sudo systemctl daemon-reload
 sudo systemctl enable vboxhostonlynic.service
 sudo /lib/systemd/systemd-sysv-install enable guacd
 sudo systemctl start guacd
-sudo systemctl start snort3-nic.service
+
