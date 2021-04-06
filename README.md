@@ -169,8 +169,8 @@ Once all the above is complete, from the terminal run `cuckoo community` to down
 To begin analysis, open up terminator (has been included with the install script) and VirtualBox. To provide visibility of analysis activity, split your terminator window into four panels. It's recommended to run the following commands in the same order to start cuckoo:
 
 - Window 1: `$ vboxmanage snapshot "[vm name]" restore current` -> This restores the analysis VM back to the snapshot that was taken **while the machine was running**.
-  - `$ cuckoo run webserver` -> This will start the Cuckoo web server and provide feedback on what the web server is doing.             
-  - `$ cuckoo run webserver 0.0.0.0:8000` -> Starting the Cuckoo web server in this manner will have cuckoo listen for web connections from any IP across the network.
+  - `$ cuckoo web runserver` -> This will start the Cuckoo web server and provide feedback on what the web server is doing.             
+  - `$ cuckoo web runserver 0.0.0.0:8000` -> Starting the Cuckoo web server in this manner will have cuckoo listen for web connections from any IP across the network.
 - Window 2: `$ cuckoo` -> This starts cuckoo as a whole. The window can be used to monitor the progress of analysis.
 - Window 3: `$ cuckoo -d process a2` -> This will display debug messages from Cuckoo providing verbose messaging letting you know the analysis is still processing and if Cuckoo has run into any errors
 - Window 4: Can be used to submit a file for analysis or execute any other commands in the terminal. See [Cuckoo documentation](https://cuckoo.readthedocs.io/en/latest/) for submitting to/interacting with Cuckoo via the terminal.
