@@ -33,12 +33,12 @@ Copy the Windows ISO (Win 7 x64 SP1) over to your Cuckoo box.
 
 Create a new virtual machine in VirtualBox. Adjust these settings as needed:
 
-Name\* - cuckoo1
-Processors - 4
-RAM - 4 GB
-HDD - 100 GB
-Disk Type - VMDK
-Storage - Dynamically Allocated
+- Name - cuckoo1\*
+- Processors - 4
+- RAM - 4 GB
+- HDD - 100 GB
+- Disk Type - VMDK
+- Storage - Dynamically Allocated
 
 \*The names in the config files and the VM must match.
 
