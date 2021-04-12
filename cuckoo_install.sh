@@ -402,7 +402,7 @@ After=vboxdrv.service
 [Service]
 Type=oneshot
 ExecStart=/usr/bin/vboxmanage hostonlyif create
-ExecStart=/usr/bin/vboxmanage hostonlyif ipconfig vboxnet --ip 192.168.56.1
+ExecStart=/usr/bin/vboxmanage hostonlyif ipconfig vboxnet0 --ip 192.168.56.1
 RemainAfterExit=yes
 
 [Install]
