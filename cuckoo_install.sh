@@ -227,15 +227,15 @@ fi
 
 printf "%-65s %s" "${l_yellow}Downloading Snort2${normal}"
 sleep 5
-curl -sSL https://www.snort.org/downloads/snort/snort-2.9.17.tar.gz --output /tmp/snort-2.9.17.tar.gz
+curl -sSL https://www.snort.org/downloads/snort/snort-2.9.17.1.tar.gz --output /tmp/snort-2.9.17.1.tar.gz
 if [[ -e /tmp/snort-2.9.17.tar.gz ]]; then
     printf "${green}++++ SUCCESS ++++${normal}\n"
-    sudo tar -xvf /tmp/snort-2.9.17.tar.gz --directory=/home/$SUDO_USER/snort-source-files/
+    sudo tar -xvf /tmp/snort-2.9.17.1.tar.gz --directory=/home/$SUDO_USER/snort-source-files/
     if (cd /home/$SUDO_USER/snort-source-files/snort-2.9.17 && sudo ./configure --enable-sourcefire && sudo make -j $cpus && sudo make install -j $cpus); then
         printf "%-65s %s\n" "${l_yellow}Installing Snort2${normal}" "${green}++++ SUCCESS ++++${normal}"
         sudo ldconfig
         sudo ln -s /usr/local/bin/snort /usr/sbin/snort
-        rm /tmp/snort-2.9.17.tar.gz
+        rm /tmp/snort-2.9.17.1.tar.gz
     else
         printf "%-65s %s\n" "${l_yellow}Installing Snort2${normal}" "${red}${bright}---- FAILED ----${normal}"
     fi
