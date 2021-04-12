@@ -56,7 +56,7 @@ Configure these network adapter settings:
 - SM - 255.255.255.0
 - DG - 192.168.56.1
 - DNS 1 - 1.1.1.1
-- DNS 2 - 1.0.0.4
+- DNS 2 - 1.0.0.1
 
 \*Replace the 'xxx' with the last octet of your choice.
 
