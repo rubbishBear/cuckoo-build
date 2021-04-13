@@ -172,8 +172,7 @@ To begin analysis, open up terminator (has been included with the install script
   - `$ cuckoo web runserver` -> This will start the Cuckoo web server and provide feedback on what the web server is doing.             
   - `$ cuckoo web runserver 0.0.0.0:8000` -> Starting the Cuckoo web server in this manner will have cuckoo listen for web connections from any IP across the network.
 - Window 2: `$ cuckoo` -> This starts cuckoo as a whole. The window can be used to monitor the progress of analysis.
-- Window 3: `$ cuckoo -d process a2` -> This will display debug messages from Cuckoo providing verbose messaging letting you know the analysis is still processing and if Cuckoo has run into any errors
-- Window 4: Can be used to submit a file for analysis or execute any other commands in the terminal. See [Cuckoo documentation](https://cuckoo.readthedocs.io/en/latest/) for submitting to/interacting with Cuckoo via the terminal.
+- Window 3 and 4 -> Can be used to start as many Cuckoo processes as needed for additional processing.
 
 After Cuckoo has been started through the terminal you can open up a browser window and navigate to localhost:8000. If you are trying to reach Cuckoo from over the network, ensure you've started the web server with `$ cuckoo run webserver 0.0.0.0:8000` and navigate to Cuckoo's IP address using port 8000.
 
