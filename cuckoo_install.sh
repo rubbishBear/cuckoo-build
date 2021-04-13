@@ -322,6 +322,7 @@ pip_pkgs=(
     Pillow
     pycrypto
     pydeep
+    m2crypto
     ujson
     cybox==2.0.1.4
     "Django<2"
