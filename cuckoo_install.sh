@@ -189,7 +189,7 @@ cpus=$(( $(lscpu | grep -P "^CPU\(s\):" | awk '{print $NF}') - 1))
 mkdir /tmp/guac-build
 printf "%-65s %s" "${l_yellow}Downloading Guacamole Server${normal}"
 sleep 5
-curl -sSL http://mirror.cc.columbia.edu/pub/software/apache/guacamole/1.3.0/source/guacamole-server-1.3.0.tar.gz --output /tmp/guac-build/guacamole-server-1.3.0.tar.gz
+wget https://apache.org/dyn/closer.lua/guacamole/1.3.0/source/guacamole-server-1.3.0.tar.gz?action=download -P /tmp/guac-build/ && mv /tmp/guac-build/guacamole-server-1.3.0.tar.gz\?action=download /tmp/guac-build/guacamole-server-1.3.0.tar.gz
 if [[ -e /tmp/guac-build/guacamole-server-1.3.0.tar.gz ]]; then
     printf "${green}++++ SUCCESS ++++${normal}\n"
     sudo tar -xvf /tmp/guac-build/guacamole-server-1.3.0.tar.gz --directory=/opt/ 2>&1 > /dev/null
@@ -322,7 +322,6 @@ pip_pkgs=(
     Pillow
     pycrypto
     pydeep
-    m2crypto
     ujson
     cybox==2.0.1.4
     "Django<2"
