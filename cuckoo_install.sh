@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Author madeDurphy
+# Author rubbishBear
 
 # Declaring color variables
 # https://stackoverflow.com/questions/4332478/read-the-current-text-color-in-a-xterm/4332530#4332530
